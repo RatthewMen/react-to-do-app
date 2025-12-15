@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import { AppShell } from './shell/AppShell';
-import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { Dashboard } from './pages/Dashboard';
@@ -13,7 +12,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <AppShell />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Login /> },
       { path: 'auth/login', element: <Login /> },
       { path: 'auth/signup', element: <Signup /> },
       { path: 'app', element: <Dashboard /> }
